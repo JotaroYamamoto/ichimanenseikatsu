@@ -1,0 +1,487 @@
+/* ！！！！！！！！！！！！共通部分！！！！！！！！！！！！ */
+.wrapper{
+  font-family: -apple-system, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
+  /* はみ出し防止 */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: white;
+  box-sizing:border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+/* ！！！！！！！！！ヘッダー ！！！！！！！！！*/
+.header{
+  /* position: fixed; */
+  z-index: 1000;
+  display: flex;
+  height: 80px;
+  background-color:orange;
+  border: 3px solid rgb(241, 138, 42);
+  align-items: center;
+  padding: 0 100px;
+  justify-content: space-between;
+  color: white;
+  opacity: 0.8;
+  
+}
+.header-title{
+  font-size: 39px;
+  color: white;
+}
+.header__left{
+}
+.header__right{
+  display: flex;
+
+}
+.header-list{
+  margin-left: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+/* ！！！！！！！！！フッター ！！！！！！！！！！！*/
+.footer{
+  line-height: 40px;
+  background-color: rgb(32, 32, 32);
+  text-align: center;
+}
+.footer-text{
+  color: white;
+}
+/*！！！！！！！！！ 一覧画面 ！！！！！！！！！！！*/
+
+/* メイン改 */
+.main1{
+  padding:100px 0 300px 0 ;
+  background-color: rgb(247, 229, 206);
+  max-width: 100%;
+}
+.main--contents1{
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+.article{
+  max-width: 100%;
+  width: 300px;
+  margin: 0 0 10px;
+  border: 1.5px solid rgba(226, 224, 224, 0.933);
+}
+.article:hover{
+  border: 1.5px solid rgb(250, 145, 46);
+}
+
+.article__img img{
+  width: 100%;
+  height :200px;
+}
+.article__bottom{
+  padding: 1rem 0.5rem;
+  background-color: white;
+  height: 120px;
+  position: relative;
+}
+.post-title{
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+}
+
+.post-price{
+  position: absolute;
+  bottom: 8px ;
+  right: 8px;
+  color:rgb(236, 144, 57);
+  font-size: 25px;
+  font-weight: 550;
+
+}
+
+/* ！！！！！！！！！投稿画面！！！！！！！！ */
+
+
+.add__top{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+.add__top__left{
+
+}
+.add-img{
+  /* margin-top: 10px; */
+  line-height: 137px;
+  width: 90%;
+  min-width: 250px;
+  background-color: rgb(252, 246, 233);
+  margin: 10px auto;
+  border-width:1px ;
+  border-style: dashed;
+  border-color: orange;
+  text-align: center;
+}
+.add-img input{
+}
+.camera-icon{
+  height: 20px;
+
+}
+.add__top__right{
+
+}
+.add-title{
+  margin-bottom: 10px;
+}
+.title-form{
+
+}
+.add-text{
+
+}
+.text-form{
+
+}
+/* 材料より下 */
+.add__mid{
+  margin-top: 50px;
+}
+.add--materials{
+
+}
+.materials-colums{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.materials-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.add--materials__left{
+}
+.add--materials__right{
+}
+
+.add--cook{
+  margin-top: 60px;
+}
+.howto{
+  margin-bottom: 15px;
+}
+.cook-index{
+  font-size: 40px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+.cook-form{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.cook-form__left{
+
+}
+.add-img2{
+  /* margin-top: 10px; */
+  line-height: 80px;
+  width: 80%;
+  min-width: 200px;
+  background-color: rgb(252, 246, 233);
+  margin: 10px auto;
+  border-width:1px ;
+  border-style: dashed;
+  border-color: orange;
+  text-align: center;
+}
+.cook-form__right{
+
+}
+
+.cook-area{
+  margin: 12px 0 0;
+  display: block;
+  width: 90%;
+  min-height: 162px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+}
+.add--cost{
+  margin-top: 60px;
+}
+.add--cost-form{
+padding: 30px 40px;
+text-align: center;
+}
+.add--cost-form span{
+  margin-left: 10px;
+  font-weight: bold;
+}
+.add-input{
+  text-align: center;
+  width: 30%;
+  height: 40px;
+  padding: 10px  8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.add__bottom{
+  margin-top: 30px;
+  padding: 30px 40px ;
+  text-align: center;
+}
+.submit-btn{
+  background: rgb(241, 138, 42);;
+  border: 1px solid rgb(241, 138, 42);;
+  color: #fff;
+  width: 100px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 550;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+/* !!!!!!!!!!!!!!!!!!詳細画面!!!!!!!!!!!!!!!!!!!! */
+
+.show-top{
+  
+}
+.show-title{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 50px;
+}
+.show-main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.show-img{
+  width: 320px;
+  margin: 0 auto;
+}
+.show-main-right{
+  max-width: 300px;
+  margin-left: 40px;
+}
+.show-text{
+  margin-left: 10px;
+}
+.show-materials{
+  margin-top: 30px;
+}
+.show-materials h2{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #E5E5E5;
+  font-size: 20px;
+}
+.material{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 3px 0;
+}
+.material-name{
+}
+.material-amount{
+
+}
+.show-cook{
+  margin-top: 60px;
+
+}
+.show-cook h1{
+  margin-bottom: 10px;
+}
+
+.show-cook-main{
+  margin-bottom: 20px;
+}
+.cook-index{
+}
+.cook-set{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.show-cook-main img{
+  width: 260px;
+  margin-right: 8px;
+}
+.show-cook-text{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ！！！！！！！！！！！！！！！！！！テンプレ！！！！！！！！！！！！！！！ */
+.textA{
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.textB{
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.inputA{
+  width: 90%;
+  margin: 10px 0 0;
+  height: 26px;
+  padding: 10px  8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1;
+  font-size: 16px;
+}
+.areaA{
+  margin: 12px 0 0;
+  display: block;
+  width: 90%;
+  min-height: 104px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+}
+.main2{
+  padding: 100px 20%;
+  background-color: rgb(247, 229, 206);
+}
+.main--contents2{
+  padding:40px;
+  background-color: white;
+  min-width: 600px;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1.5px solid rgb(194, 176, 159);
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* リセットcss */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
