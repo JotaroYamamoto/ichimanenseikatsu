@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
     //
     public function index(){
+        $user=Auth::user();
         $posts=Post::all();
-        $param=['posts'=>$posts];
+        $param=['posts'=>$posts,'user'=>$user];
         return view('posts.index',$param);
     }
     public function show(Request $request){

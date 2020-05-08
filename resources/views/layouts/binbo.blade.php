@@ -16,12 +16,22 @@
           <a href="/" class="header-title">一万円生活</a>
         </div>
         <div class="header__right">
+        @if(Auth::check())
           <a href ="/posts/add" class="header-list" >
             投稿
           </a>
           <a href ="#" class="header-list" >
             ログアウト
           </a>
+        @else
+        <a href ="/login" class="header-list" >
+          ログイン
+        </a>
+        <a href ="/register" class="header-list" >
+          会員登録
+        </a>
+        @endif
+
         </div>
       </header>
       @yield('content')
