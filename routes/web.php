@@ -17,7 +17,8 @@ Route::get('posts/welcome', function () {
 Route::get('/','PostsController@index');
 
 Route::get('posts/add','PostsController@add');
-Route::post('posts/add','PostsController@create');
+Route::post('posts/add','PostsController@create')
+        ->middleware('auth');
 
 Route::get('posts/show','PostsController@show');
 
@@ -26,3 +27,7 @@ Route::post('posts/edit','PostsController@update');
 
 Route::get('posts/delete','PostsController@delete');
 Route::post('posts/delete','PostsController@remove');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
