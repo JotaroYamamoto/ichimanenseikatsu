@@ -12,7 +12,7 @@
             <h1>{{$post->title}}({{$post->cost}}円)</h1>
           </div>
           <div class="show-main">
-            <img class="show-img" src="{{$post->mainimg}}" alt="">
+            <img class="show-img" src="{{ asset('storage/'.$post->mainimg) }}" alt="">
             <div class="show-main-right">
               <div class="show-text">
                 <p>{{$post->text}}</p>

@@ -9,7 +9,7 @@
           <h1>{{$post->title}}({{$post->cost}}円)</h1>
         </div>
         <div class="show-main">
-          <img class="show-img" src="{{$post->mainimg}}" alt="">
+          <img class="show-img" src="{{ asset('storage/'.$post->mainimg) }}" alt="">
           <div class="show-main-right">
             <div class="show-text">
               <p>{{$post->text}}</p>
@@ -55,6 +55,11 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="show-bottom">
+        <a href="#" onclick="history.back()">戻る</a>
+        <a href="/posts/edit?id={{$post->id}}">編集</a>
+        <a href="/posts/delete?id={{$post->id}}">削除</a>
       </div>
     </div>
   </div>
