@@ -10,7 +10,7 @@
         @foreach($posts as $post)
           <a href="/posts/show?id={{$post->id}}" class="article">
             <div class="article__img">
-              <img src="{{$post->mainimg}}" alt="">
+              <img src="{{ asset('storage/'.$post->mainimg) }}" alt="">
             </div>
             <div class="article__bottom">
               <div class="post-title">

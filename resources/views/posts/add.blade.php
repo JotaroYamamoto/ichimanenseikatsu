@@ -3,7 +3,7 @@
   <div class="wapper">
     <div class="main2">
       <div class="main--contents2">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
           @csrf
           <div class="add__top">
             <div class="add__top__left">

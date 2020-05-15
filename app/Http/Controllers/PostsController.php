@@ -26,11 +26,22 @@ class PostsController extends Controller
     public function create(Request $request){
         $post=new Post;
         $post->title=$request->title;
-        $post->mainimg=$request->mainimg;
         $post->text=$request->text;
         $post->cost=$request->cost;
-        $post->save();
-        return redirect('/');
+
+        if($request->file('mainimg'))
+        {
+            $path=$request->mainimg->store('public');
+            $post->mainimg=basename($path);
+            $post->save();
+            return redirect('/');
+        }else
+        {
+            return redirect('/')
+            ->back()
+            ->withInput()
+            ->withErrors();
+        }
     }
 
     public function edit(Request $request){
@@ -39,12 +50,14 @@ class PostsController extends Controller
         return view('posts.edit',$param);
     }
     public function update(Request $request){
+        $user=Auth::user();
         // hiddenで送信されたidでdbからデータ取得
         $post=Post::find($request->id);
         $post->title=$request->title;
         $post->mainimg=$request->mainimg;
         $post->text=$request->text;
         $post->cost=$request->cost;
+        $post->user_id=$user;
         $post->save();
         return redirect('/');
     }
@@ -54,7 +67,7 @@ class PostsController extends Controller
         return view('posts.delete',$param);
     }
     public function remove(Request $request){
-        Post::find($request-id)->delete();
+        Post::find($request->id)->delete();
         return redirect('/');
     }
 }
